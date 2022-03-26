@@ -1,5 +1,3 @@
-# more info on https://github.com/afunTW/pyqt5-video-labeling
-
 # USAGE: python3 main.py
 
 import argparse
