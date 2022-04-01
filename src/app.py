@@ -365,8 +365,7 @@ class VideoApp(VideoAppViewer):
             i_trim_sec = (int(i_trim_frame.text()) - frame_to_add)/ self.video_fps
             s_trim_sec = (int(s_trim_frame.text()) + frame_to_add) / self.video_fps
 
-            file_name_output = self.videopath.replace('merged__res1', '/cuts/label' + '_' + str(i))
-
+            file_name_output = self.videopath.replace('complete', '/cuts/label' + '_' + str(i))
             if not os.path.exists(file_name_output):
                 ffmpeg_extract_subclip(self.videopath, i_trim_sec, s_trim_sec,
                                        targetname=file_name_output)

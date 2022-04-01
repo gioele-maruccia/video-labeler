@@ -9,6 +9,9 @@ import pytesseract
 import argparse
 import cv2
 
+# TO BE COMMENTED FOR LINUX OS
+pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
+
 
 def decode_predictions(scores, geometry, min_confidence):
     # grab the number of rows and columns from the scores volume, then
@@ -171,16 +174,17 @@ def recognizer(img, *args, **kwargs):
         return(text)
     print("concluded")
 
-    # strip out non-ASCII text so we can draw the text on the image
-    # using OpenCV, then draw the text and a bounding box surrounding
-    # the text region of the input image
 
-    # text = "".join([c if ord(c) < 128 else "" for c in text]).strip()
-    # output = orig.copy()
-    # cv2.rectangle(output, (startX, startY), (endX, endY),
-    # 	(0, 0, 255), 2)
-    # cv2.putText(output, text, (startX, startY - 20),
-    # 	cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 255), 3)
-    #
-    # #show the output image
-    # cv2.imshow("Text Detection", output)
+    # # strip out non-ASCII text so we can draw the text on the image
+    # # using OpenCV, then draw the text and a bounding box surrounding
+    # # the text region of the input image
+    # #
+    # # text = "".join([c if ord(c) < 128 else "" for c in text]).strip()
+    # # output = orig.copy()
+    # # cv2.rectangle(output, (startX, startY), (endX, endY),
+    # # 	(0, 0, 255), 2)
+    # # cv2.putText(output, text, (startX, startY - 20),
+    # # 	cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 255), 3)
+    # #
+    # # #show the output image
+    # # cv2.imshow("Text Detection", output)
