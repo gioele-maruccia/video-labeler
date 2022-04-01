@@ -54,3 +54,7 @@ If that's not the case, please correct the tesseract reference in the first line
 - The optical character recognition is useful as a support for labeling but it not always works as expected. So please double check the video timestamps before saving each video section.
 - The input file name should starts with the string "complete" in order to make the cut process works. This can be changed inside the app.py cut_videos function. 
 - Each chosen video section should represent a single goal but for the needs of the neural network we cut a broader video section (with a padding of 30 seconds) so to take into account also the non relevant aspects of the soccer video.
+
+## The dataset
+With the help of this GUI, I created a dataset made of 271 goals coming from the "La Liga" championship.
+You can find them, togheter with the labels, inside [this](https://www.dropbox.com/sh/up35305tbk64p4k/AACZnQF3lECKs_LexvZ8Fej3a?dl=0) dropbox directory, under the "full_game_goal_cuts" folder. 
